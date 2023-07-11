@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Obtención de datos</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Obtención de datos</h1>
+    <form id="data-form">
+      <div class="site-container">
+        <h2>Sitio 1</h2>
+        <div>
+            <label for="siteurl_1">URL del sitio:</label>
+            <input type="text" id="siteUrl_1" name="siteUrl_1" placeholder="https://www.ejemplo.com">
+        </div>
+        <div class="product-info">
+          <label for="site1-product">Descripción del Producto:</label>
+          <input type="text" id="site1-description" name="site1-description">
+
+          <div class="data-container">
+            <div class="category" id="site1-category"></div>
+            <div class="brandName" id="site1-brandName"></div>
+            <div class="productPrice" id="site1-productPrice"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Similar code for the other site containers (site2, site3, site4, site5) -->
+
+      <div class="buttons-container">
+        <button type="button" id="get-data-btn">Obtener Datos</button>
+        <button type="button" id="clear-data-btn">Borrar Datos</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <nav>
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
