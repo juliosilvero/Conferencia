@@ -147,7 +147,8 @@
     padding: 5px;
   }
 
-  .navbar-color {
+
+.navbar-color {
   background-color: #04182bfd;
   color: #fff;
 
@@ -155,4 +156,5 @@
 
   .navFooter {
     height: auto;
+
   }  

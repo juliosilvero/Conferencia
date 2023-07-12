@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!---<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conferencia</title>
+    <title>Conferencia</title>-->
+<jsp:include page="head.jsp"/>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -34,9 +35,10 @@
                 <%
                   if(session.getAttribute("email") == null){
                 %>
-                  <a class="nav-link" style="color: yellow"  href="register.jsp">Registrarse</a>
 
-                  <a class="nav-link btn-log-reg" href="login.jsp">Iniciar Sesión</a>
+                <a class="nav-link" style="color: yellow; border-radius: 10px;" href="register.jsp" onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='';">Registrarse</a>
+
+                <a class="nav-link" style="color: yellow" href="login.jsp">Iniciar Sesión</a>
 
                 <%
                   }
@@ -45,17 +47,14 @@
                   if(session.getAttribute("email") != null){
                 %>
 
-                  <a class="nav-link" style="color: yellow"  href="comprar.jsp">Comprar Tickets</a>
+                  <a class="nav-link" style="color: yellow; border-radius: 10px;"  href="comprar.jsp" onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='';">Comprar Tickets</a>
 
-                  <a class="nav-link btn-log-reg" href="logout">Cerrar Sesión</a>
+                  <a class="nav-link" style="color: yellow" href="logout">Cerrar Sesión</a>
 
                 <%
                   }
                 %>
-
-
               </div>
-
             </div>
           </div>  
         </nav>

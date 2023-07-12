@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
+   <!--<meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>CompraTicket</title>
-  
+    <title>CompraTicket</title>-->
+<jsp:include page="head.jsp"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <link rel="stylesheet" href="./Integrador Boost/CSS/style2.css">
 </head>
@@ -26,16 +26,16 @@
               <a class="nav-link active" href="#">La Conferencia</a>
               <a class="nav-link" href="#">Los Oradores</a>
               <a class="nav-link" href="#">Lugar y Fecha</a>
-              <a class="nav-link" href="#">Conviertete en Orador</a>
-              <a class="nav-link" style="color: yellow" href="index.jsp">Volver al Inicio</a>
+              <a class="nav-link" href="#">Convertite en Orador</a>
+
                 <%
                     if(session.getAttribute("email") == null){
                 %>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: yellow" href="register.jsp">Registrarse</a>
+                    <a class="nav-link" style="color: yellow; border-radius: 10px;" href="register.jsp" onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='';">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-log-reg" href="login.jsp">Iniciar Sesión</a>
+                    <a class="nav-link" style="color: yellow" href="login.jsp">Iniciar Sesión</a>
                 </li>
                 <%
                     }
@@ -44,7 +44,11 @@
                     if(session.getAttribute("email") != null){
                 %>
                 <li class="nav-item">
-                    <a class="nav-link btn-log-reg" href="logout">Cerrar Sesión</a>
+                  <a class="nav-link" style="color: yellow; border-radius: 10px;"  href="index.jsp" onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='';">Volver al Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" style="color: yellow" href="logout">Cerrar Sesión</a>
                 </li>
                 <%
                     }
@@ -105,11 +109,10 @@
   </div>
 </div>
 </div>
+  </article>
 
 
-  <article>  
-
-    <article>
+ <article>
       <div id="custom-alert"></div>
       <div class="container">
       <p class="centrado mb-1">VENTA</p>
@@ -128,7 +131,6 @@
             <input type="email" id="correo" class="input-field" placeholder="Correo">
           </div>
 
-          
           <div class="input-container">
             <input type="text" id="cantidad" class="input-field" placeholder="Cantidad">
             <select id="categoria" class="input-field">
@@ -150,9 +152,8 @@
       </div>
     </div>
   </div>
-    </article>
-</section>
-    </main>
+ </article>
+</main>
  
 <footer>
   <!--Barra de navegación Footer-->
